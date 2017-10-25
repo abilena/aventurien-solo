@@ -24,7 +24,7 @@ function aventurien_solo_display($module, $title, $last_pid, $passage, $debug)
 
     $xml = aventurien_solo_extract_harlowe_xml($module_file);
 
-    if ($passage)
+    if ($passage != "")
     {
         // load requested passage and use it's pid
         $passage_xml = $xml->xpath("/tw/tw-storydata/tw-passagedata[@name=\"$passage\"]")[0];
