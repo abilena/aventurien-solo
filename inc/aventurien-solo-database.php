@@ -12,7 +12,7 @@ function aventurien_solo_create_tables() {
         `module` tinytext NOT NULL,
         `user` tinytext NOT NULL,
         `pid` smallint NOT NULL,
-        `vars` text NOT NULL DEFAULT '[]',
+        `vars` text NOT NULL,
 		UNIQUE KEY id (id)
 		);";
 
