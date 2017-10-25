@@ -3,7 +3,7 @@
 function aventurien_solo_create_tables() {
    	global $wpdb;
 
-    $db_table_name = $wpdb->prefix . 'aventurien_solo_states';
+    $db_table_name = $wpdb->prefix . 'rp_solo_states';
 	// create the ECPT metabox database table
 	if($wpdb->get_var("show tables like '$db_table_name'") != $db_table_name) 
 	{
@@ -23,7 +23,7 @@ function aventurien_solo_create_tables() {
 
 function aventurien_solo_db_get_id($module, $user) {
    	global $wpdb;
-    $db_table_name = $wpdb->prefix . 'aventurien_solo_states';
+    $db_table_name = $wpdb->prefix . 'rp_solo_states';
 
     $id = $wpdb->get_var("SELECT id FROM $db_table_name WHERE module='$module' AND user='$user'");
     
@@ -36,7 +36,7 @@ function aventurien_solo_db_get_id($module, $user) {
 
 function aventurien_solo_db_get_pid($module, $user) {
    	global $wpdb;
-    $db_table_name = $wpdb->prefix . 'aventurien_solo_states';
+    $db_table_name = $wpdb->prefix . 'rp_solo_states';
     
     $pid = $wpdb->get_var("SELECT pid FROM $db_table_name WHERE module='$module' AND user='$user'");
 
@@ -48,7 +48,7 @@ function aventurien_solo_db_get_pid($module, $user) {
 
 function aventurien_solo_db_set_pid($module, $user, $pid) {
    	global $wpdb;
-    $db_table_name = $wpdb->prefix . 'aventurien_solo_states';
+    $db_table_name = $wpdb->prefix . 'rp_solo_states';
 
     $wpdb->query('START TRANSACTION');
 
@@ -72,7 +72,7 @@ function aventurien_solo_db_set_pid($module, $user, $pid) {
 
 function aventurien_solo_db_get_vars($module, $user) {
    	global $wpdb;
-    $db_table_name = $wpdb->prefix . 'aventurien_solo_states';
+    $db_table_name = $wpdb->prefix . 'rp_solo_states';
 
     $json = $wpdb->get_var("SELECT vars FROM $db_table_name WHERE module='$module' AND user='$user'");
     
@@ -81,7 +81,7 @@ function aventurien_solo_db_get_vars($module, $user) {
 
 function aventurien_solo_db_set_vars($module, $user, $vars) {
    	global $wpdb;
-    $db_table_name = $wpdb->prefix . 'aventurien_solo_states';
+    $db_table_name = $wpdb->prefix . 'rp_solo_states';
 
     $wpdb->query('START TRANSACTION');
 
